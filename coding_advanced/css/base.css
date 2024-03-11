@@ -71,6 +71,19 @@ body {
 	padding: 10px 0;
 }
 
+@media (min-width: 768px) {
+	.slick-prev,
+	.slick-next {
+	  top: 50%; /* 画像の中央に配置 */
+	  transform: translateY(-50%);
+	}
+	.slick-prev {
+	  left: -40px; /* 画像の左に配置 */
+	}
+	.slick-next {
+	  right: -40px; /* 画像の右に配置 */
+	}
+  }
 
 .slider {
 	width: 100%;
@@ -104,12 +117,22 @@ body {
 	background-color: #FFC7AF;
 }
 
+.accordion-button:not(.collapsed)::after {
+	background-image: none;
+}
 .accordion-button {
 	background-color: #FFC7AF;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Yu Gothic UI Semibold';
 }
 
 .accordion-body {
 	background-color: #FFEFD5;
+}
+
+.accordion-body li {
+	padding: 10px;
 }
 
 .accordion {
@@ -123,6 +146,14 @@ body {
 a {
     color: black;
     font-size: 13px;
+}
+
+.accordion-button:not(.collapsed) {
+	color: black;
+}
+
+.accordion-button::after {
+	background-image:none
 }
 
 .nav-link {
@@ -201,13 +232,13 @@ a {
 	visibility: hidden;
 	transform: translateY(50px);
 	transition: opacity 1s,visibility 1s, transform 1s;
-  }
-  
-  .scroll {
+}
+
+.scroll {
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0px);
-  }
+}
 
 .bottom {
 	background-color: black;
@@ -223,7 +254,6 @@ a {
 
 .brunch-list {
 	display: flex;
-	margin: 0 auto;
 }
 
 .brunch img {
@@ -234,7 +264,6 @@ a {
 
 .brunch {
 	align-items: center;
-	margin: 0 auto;
 }
 
 .col-md-12 p {
@@ -265,6 +294,6 @@ a {
 
 @media (max-width: 780px) {
 	.hide-on-mobile {
-	  display: none !important;
+	display: none !important;
 	}
 }

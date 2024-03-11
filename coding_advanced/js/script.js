@@ -1,16 +1,16 @@
 $(".slider").slick({
-    autoplay: true,
-    dots: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [{
+  autoplay: true,
+  dots: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  responsive: [{
     breakpoint: 768,
     settings: {
-    slidesToShow: 1,
-    },
-      },
+    slidesToShow: 1,},
+  },
     ],
 });
+
 
   $(window).scroll(function (){
     $('.js-fade').each(function(){
